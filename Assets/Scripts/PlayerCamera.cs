@@ -6,11 +6,20 @@ using UnityEngine.Serialization;
 
 public class PlayerCamera : MonoBehaviour
 {
+    public static PlayerCamera Instance;
+    
     public Transform stageTilt;
     public Transform horizontalRotation, verticalRotation;
     public Transform topDownCamera;
     private Vector2 _rotation;
+    public Camera cam;
     [Range(0.0F, 45.0F)] public float stageTiltAmount = 15.0F;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     private void Update()
     {
         _rotation += new Vector2(Input.GetAxis("Mouse X"), -Input.GetAxis("Mouse Y"));

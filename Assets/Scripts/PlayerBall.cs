@@ -14,7 +14,6 @@ public class PlayerBall : MonoBehaviour
     public float force = 2.0F;
 
     public Rigidbody _rigidbody;
-    public Transform _camera;
     [NonSerialized] public Vector2 _inputVector = Vector2.zero;
     private Vector3 _lastContactNormal = Vector3.up;
     private bool _touchingSurface = false;
@@ -33,17 +32,19 @@ public class PlayerBall : MonoBehaviour
     private void Update()
     {
         _inputVector = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        var rotationAxis = Vector3.Cross(_lastContactNormal, _rigidbody.velocity);
+        modelRotation.localRotation = Quaternion.Euler(rotationAxis * (Time.deltaTime * rotationFactor)) * modelRotation.localRotation;
     }
 
     private void FixedUpdate()
     {
-        var forward = _camera.forward.x0z().normalized;
-        var right = _camera.transform.right.x0z().normalized;
+        var forward = PlayerCamera.Instance.cam.transform.forward.x0z().normalized;
+        var right = PlayerCamera.Instance.cam.transform.right.x0z().normalized;
         var movementVector = forward * _inputVector.y + right * _inputVector.x;
+        var projectedMovement = Vector3.ProjectOnPlane(movementVector, _lastContactNormal).normalized;
         
-        _rigidbody.AddForce(movementVector * force * Vector3.Dot(_lastContactNormal,Vector3.up));
-        var rotationAxis = Vector3.Cross(_lastContactNormal, _rigidbody.velocity);
-        modelRotation.localRotation = Quaternion.Euler(rotationAxis * (Time.deltaTime * rotationFactor)) * modelRotation.localRotation;
+        if (_touchingSurface)
+            _rigidbody.AddForce(projectedMovement * force);
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -55,6 +56,7 @@ public class PlayerBall : MonoBehaviour
 
     private void OnCollisionStay(Collision collisionInfo)
     {
+        _touchingSurface = true;
         if (collisionInfo.impulse.magnitude > 0.001F)
             _lastContactNormal = collisionInfo.impulse.normalized;
     }
@@ -62,6 +64,7 @@ public class PlayerBall : MonoBehaviour
     private void OnCollisionExit(Collision other)
     {
         _touchingSurface = false;
+        _lastContactNormal = Vector3.up;
         //_lastContactNormal = Vector3.zero;
     }
 }

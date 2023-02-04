@@ -13,6 +13,6 @@ public class Collectible : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Collect();
+        if (other.gameObject.layer == LayerMask.NameToLayer("Player")) Collect();
     }
 }
