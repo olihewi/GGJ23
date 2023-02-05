@@ -12,12 +12,15 @@ public class PlayerCamera : MonoBehaviour
     public Transform horizontalRotation, verticalRotation;
     public Transform topDownCamera;
     private Vector2 _rotation;
-    public Camera cam;
+    public Transform cameraTransform;
     [Range(0.0F, 45.0F)] public float stageTiltAmount = 15.0F;
 
     private void Awake()
     {
-        Instance = this;
+        if (Instance == null)
+        {
+            Instance = this;
+        }
     }
 
     private void Update()

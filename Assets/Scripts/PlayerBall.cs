@@ -39,8 +39,8 @@ public class PlayerBall : MonoBehaviour
 
     private void FixedUpdate()
     {
-        var forward = PlayerCamera.Instance.cam.transform.forward.x0z().normalized;
-        var right = PlayerCamera.Instance.cam.transform.right.x0z().normalized;
+        var forward = PlayerCamera.Instance.cameraTransform.forward.x0z().normalized;
+        var right = PlayerCamera.Instance.cameraTransform.right.x0z().normalized;
         var movementVector = forward * _inputVector.y + right * _inputVector.x;
         var projectedMovement = Vector3.ProjectOnPlane(movementVector, _lastContactNormal).normalized;
         

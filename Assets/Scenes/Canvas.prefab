@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1206448752}
   - component: {fileID: 1206448751}
-  - component: {fileID: 1206448753}
   m_Layer: 0
   m_Name: Audio Source
   m_TagString: Untagged
@@ -129,18 +128,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1206448753
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1206448750}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ff44d2318dce6d488c6e5209d4852fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1906796055
 GameObject:
   m_ObjectHideFlags: 0
@@ -828,6 +815,7 @@ MonoBehaviour:
   collectibleCounter: {fileID: 1290769725474722632}
   speedLines: {fileID: 6143937863747104602}
   timer: {fileID: 1290769723532645941}
+  music: {fileID: 1206448751}
   speedCurve:
     serializedVersion: 2
     m_Curve:
@@ -1369,11 +1357,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1961357233396407658, guid: f3426edd5b5f5024ab639705cea8aa59,
+        type: 3}
+      propertyPath: cameraTransform
+      value: 
+      objectReference: {fileID: 6143937863484130284}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3426edd5b5f5024ab639705cea8aa59, type: 3}
 --- !u!4 &6143937862666386040 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1961357233396407657, guid: f3426edd5b5f5024ab639705cea8aa59,
+    type: 3}
+  m_PrefabInstance: {fileID: 5655257708097513233}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6143937863484130284 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1961357234759427325, guid: f3426edd5b5f5024ab639705cea8aa59,
     type: 3}
   m_PrefabInstance: {fileID: 5655257708097513233}
   m_PrefabAsset: {fileID: 0}

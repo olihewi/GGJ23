@@ -7,13 +7,29 @@ using UnityEngine.UI;
 
 public class UI : MonoBehaviour
 {
+    public static UI Instance;
     public TMP_Text speedometer;
     public TMP_Text collectibleCounter;
     public Renderer speedLines;
     public TMP_Text timer;
+    public AudioSource music;
     private static readonly int Speed = Shader.PropertyToID("_Speed");
 
     public AnimationCurve speedCurve;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+            music.Play();
+        }
+        else
+        {
+            DestroyImmediate(gameObject);
+        }
+    }
 
     private void Update()
     {
