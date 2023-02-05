@@ -12,6 +12,7 @@ public class UI : MonoBehaviour
     public TMP_Text collectibleCounter;
     public Renderer speedLines;
     public TMP_Text timer;
+    public TMP_Text stageText;
     public AudioSource music;
     private static readonly int Speed = Shader.PropertyToID("_Speed");
 

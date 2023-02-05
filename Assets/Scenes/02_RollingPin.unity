@@ -764,6 +764,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea348ce66dca95e46b29251b99cd6ceb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDefaultGoal: 0
   nextScene: 02_RollingPin
 --- !u!65 &279805624
 BoxCollider:
@@ -3585,7 +3586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59d3b409900dc80429d7747f211da97d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageName: Dev Stage
+  stageName: Onion Spiral
   stageTime: 120
 --- !u!4 &1219591263
 Transform:
@@ -6281,6 +6282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea348ce66dca95e46b29251b99cd6ceb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDefaultGoal: 1
   nextScene: 03_Ceiling
 --- !u!65 &2124392867
 BoxCollider:

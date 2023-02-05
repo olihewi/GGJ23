@@ -4127,7 +4127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59d3b409900dc80429d7747f211da97d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageName: Dev Stage
+  stageName: Potato Pressure
   stageTime: 120
 --- !u!4 &1219591263
 Transform:
@@ -4314,6 +4314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea348ce66dca95e46b29251b99cd6ceb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDefaultGoal: 1
   nextScene: 02_RollingPin
 --- !u!64 &1269523317
 MeshCollider:
@@ -7298,6 +7299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea348ce66dca95e46b29251b99cd6ceb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDefaultGoal: 0
   nextScene: 01_Kitchen
 --- !u!65 &2124392867
 BoxCollider:

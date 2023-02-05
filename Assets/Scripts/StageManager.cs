@@ -24,6 +24,7 @@ public class StageManager : MonoBehaviour
     private void Start()
     {
         currentTime = stageTime;
+        UI.Instance.stageText.text = stageName;
     }
 
     private void Update()
@@ -33,7 +34,7 @@ public class StageManager : MonoBehaviour
         {
             RestartLevel();
         }
-        if (Input.GetKeyDown(KeyCode.R)) RestartLevel();
+        if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Restart")) RestartLevel();
     }
 
     public void RestartLevel()
