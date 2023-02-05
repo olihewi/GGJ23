@@ -22,7 +22,11 @@ public class PlayerCamera : MonoBehaviour
 
     private void Update()
     {
-        _rotation += new Vector2(Input.GetAxis("Mouse X"), -Input.GetAxis("Mouse Y"));
+        _rotation += new Vector2(
+            Input.GetAxis("Mouse X") + 
+            Input.GetAxis("LookHorizontal") * Time.deltaTime * 90.0F, 
+            -Input.GetAxis("Mouse Y") + 
+            Input.GetAxis("LookVertical") * Time.deltaTime * 90.0F);
         _rotation.y = Mathf.Clamp(_rotation.y, 25.0F, 80.0F);
         transform.position = PlayerBall.Instance.transform.position + Vector3.up;
         horizontalRotation.localRotation = Quaternion.Euler(0.0F, _rotation.x, 0.0F);

@@ -18,6 +18,7 @@ public class PlayerBall : MonoBehaviour
     private Vector3 _lastContactNormal = Vector3.up;
     private bool _touchingSurface = false;
     public float rotationFactor = 90.0F;
+    private Vector2 _currentVelocity;
 
     private void OnValidate()
     {
@@ -31,7 +32,7 @@ public class PlayerBall : MonoBehaviour
 
     private void Update()
     {
-        _inputVector = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        _inputVector = Vector2.SmoothDamp(_inputVector, new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")), ref _currentVelocity, 0.25F);
         var rotationAxis = Vector3.Cross(_lastContactNormal, _rigidbody.velocity);
         modelRotation.localRotation = Quaternion.Euler(rotationAxis * (Time.deltaTime * rotationFactor)) * modelRotation.localRotation;
     }

@@ -67,11 +67,41 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f1347872dbd5419409b0bd898b5a85b6, type: 2}
+    - target: {fileID: -6031708411201975295, guid: 874fddd3b4f07e74d9ce04d5736c8e20,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f1347872dbd5419409b0bd898b5a85b6, type: 2}
+    - target: {fileID: -5159665212716187377, guid: 874fddd3b4f07e74d9ce04d5736c8e20,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f1347872dbd5419409b0bd898b5a85b6, type: 2}
     - target: {fileID: 919132149155446097, guid: 874fddd3b4f07e74d9ce04d5736c8e20,
         type: 3}
       propertyPath: m_Name
-      value: KitchenBox
+      value: KitchenBox Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 2511811754567536238, guid: 874fddd3b4f07e74d9ce04d5736c8e20,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f1347872dbd5419409b0bd898b5a85b6, type: 2}
+    - target: {fileID: 3853385372961052669, guid: 874fddd3b4f07e74d9ce04d5736c8e20,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f1347872dbd5419409b0bd898b5a85b6, type: 2}
+    - target: {fileID: 8247994413960396516, guid: 874fddd3b4f07e74d9ce04d5736c8e20,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f1347872dbd5419409b0bd898b5a85b6, type: 2}
+    - target: {fileID: 8755637015503247416, guid: 874fddd3b4f07e74d9ce04d5736c8e20,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f1347872dbd5419409b0bd898b5a85b6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 874fddd3b4f07e74d9ce04d5736c8e20, type: 3}
 --- !u!1 &7911268347415205453 stripped

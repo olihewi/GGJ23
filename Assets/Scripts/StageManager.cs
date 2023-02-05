@@ -33,6 +33,7 @@ public class StageManager : MonoBehaviour
         {
             RestartLevel();
         }
+        if (Input.GetKeyDown(KeyCode.R)) RestartLevel();
     }
 
     public void RestartLevel()

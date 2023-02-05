@@ -19,7 +19,7 @@ public class UI : MonoBehaviour
     {
         speedometer.text = $"{PlayerBall.Instance._rigidbody.velocity.magnitude:F0} cm/s";
         collectibleCounter.text =
-            $"{StageManager.Instance.maxCollectibles}/{StageManager.Instance.collectibles}";
+            $"{StageManager.Instance.collectibles}/{StageManager.Instance.maxCollectibles}";
         speedLines.material.SetFloat(Speed, speedCurve.Evaluate(PlayerBall.Instance._rigidbody.velocity.magnitude));
         timer.text = $"{StageManager.Instance.currentTime:F2}s";
     }
