@@ -25,6 +25,7 @@ public class PlayerCamera : MonoBehaviour
 
     private void Update()
     {
+        if (UI.Instance.Paused) return;
         _rotation += new Vector2(
             Input.GetAxis("Mouse X") + 
             Input.GetAxis("LookHorizontal") * Time.deltaTime * 90.0F, 
