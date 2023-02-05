@@ -70,7 +70,27 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2652af1460647ff4db33456c2a7426ff,
         type: 3}
       propertyPath: m_Name
-      value: Pan
+      value: Pan Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2652af1460647ff4db33456c2a7426ff, type: 3}
+--- !u!1 &879691380551381554 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2652af1460647ff4db33456c2a7426ff,
+    type: 3}
+  m_PrefabInstance: {fileID: 68718891508027235}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &8241475835694553460
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 879691380551381554}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7921095120403375834, guid: 2652af1460647ff4db33456c2a7426ff, type: 3}

@@ -15,17 +15,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: a92a8252135c9ea42a631d71f74da00f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 27.01482
+      value: 13.258944
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a92a8252135c9ea42a631d71f74da00f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.373549
+      value: 4.601631
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a92a8252135c9ea42a631d71f74da00f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 22.22397
+      value: 19.405987
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a92a8252135c9ea42a631d71f74da00f,
         type: 3}
@@ -66,11 +66,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d58603790754284418155e75a9c63405, type: 2}
+      objectReference: {fileID: 2100000, guid: d896d3480cda2fd44aa87a031ce7a89a, type: 2}
     - target: {fileID: 919132149155446097, guid: a92a8252135c9ea42a631d71f74da00f,
         type: 3}
       propertyPath: m_Name
-      value: Sink
+      value: Sink Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a92a8252135c9ea42a631d71f74da00f, type: 3}
