@@ -146,6 +146,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6684975915180319141, guid: fe3eb25fe0c91a1419977d44cccb4a4e,
+        type: 3}
+      propertyPath: m_Drag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6684975915180319141, guid: fe3eb25fe0c91a1419977d44cccb4a4e,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6684975915180319141, guid: fe3eb25fe0c91a1419977d44cccb4a4e,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
     - target: {fileID: 7785607782083005802, guid: fe3eb25fe0c91a1419977d44cccb4a4e,
         type: 3}
       propertyPath: m_Layer

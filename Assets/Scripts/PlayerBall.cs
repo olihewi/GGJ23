@@ -42,7 +42,7 @@ public class PlayerBall : MonoBehaviour
         var forward = PlayerCamera.Instance.cameraTransform.forward.x0z().normalized;
         var right = PlayerCamera.Instance.cameraTransform.right.x0z().normalized;
         var movementVector = forward * _inputVector.y + right * _inputVector.x;
-        var projectedMovement = Vector3.ProjectOnPlane(movementVector, _lastContactNormal).normalized;
+        var projectedMovement = Vector3.ProjectOnPlane(movementVector, _lastContactNormal).normalized * movementVector.magnitude;
         
         if (_touchingSurface)
             _rigidbody.AddForce(projectedMovement * force);
